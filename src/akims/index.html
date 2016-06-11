@@ -1,0 +1,82 @@
+---
+title: Healthitecture | Construct health. Learn from it. Rinse, repeat.
+layout: default
+category: eyes
+---
+
+{% include header.html %}
+
+<div class="clearfix"> </div>
+      </div>
+    </div>
+    <div class="men">
+      <div class="container">
+        <div class="col-md-9 single_top">
+          <h1 class="page-heading product-listing">
+            Makia&#382o produktai akims
+            <span class="heading-counter">Pristatymo trukm&#279: 2 savait&#279s</span>
+          </h1>
+
+          {% assign subcategories = site[page.category] | map: 'subcategory' | uniq %}
+
+          {% for subcategory in subcategories %}
+            {% assign info = site.data.subcategories[subcategory] %}
+
+            <div class="brand_box">
+              <div class="left-side col-xs-12 col-sm-3">
+                <img src="{{ info.pic }}" alt=""/>
+              </div>
+
+              <div class="middle-side col-xs-12 col-sm-5">
+                <h4>
+                  <a href="akiu_seseliai.html">
+                    {{ info.name }}
+                  </a>
+                </h4>
+
+                <p>
+                  {{ info.description }}
+                </p>
+              </div>
+              <div class="right-side col-xs-12 col-sm-4">
+                {% assign items = site[page.category] | where: 'subcategory', subcategory %}
+                <p><a href="akiu_seseliai.html">{{ items | size }} Prekės</a></p>
+                <a href="akiu_seseliai.html" title="Online Reservation" class="btn btn1 btn-primary btn-normal btn-inline " target="_self">Peržiūrėti</a>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          {% endfor %}
+
+        </div>
+
+        <div class="col-md-3">
+          <h3 class="m_1">Populiariausi produktai</h3>
+
+          {% for item_group in site.data.item_groups limit:1 %}
+            {% for item in item_group.items limit:1 %}
+              <ul class="product">
+                <a href="2_1_1.html">
+                  <li class="product_img">
+                    <img src="{{ item.pic }}" class="img-responsive" alt=""/>
+                  </li>
+
+                  <li class="product_desc">
+                    <h4>
+                      {{ item.name }}
+                    </h4>
+
+                    <p class="single_price">{{ item.price }}</p>
+                  </li>
+                </a>
+
+                <div class="clearfix">
+                </div>
+              </ul>
+            {% endfor %}
+          {% endfor %}
+
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>

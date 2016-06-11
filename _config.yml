@@ -3,5 +3,9 @@ destination: dist
 keep_files: [js, css, img]
 exclude: [js, css, scss, img]
 tagline: "Construct health. Learn from it. Rinse, repeat. Current experiment: 80/10/10 raw vegan fruit diet."
-gems:
-  - jekyll-sitemap
+collections:
+  eyes:
+    output: true
+    permalink: /akims/:path
+# gems:
+#   - jekyll-sitemap

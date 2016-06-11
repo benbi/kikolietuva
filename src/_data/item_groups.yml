@@ -1,0 +1,15 @@
+- name: Akims
+  slug: akims
+  description: MAKIAŽO PRODUKTAI AKIMS
+  subgroups:
+    - slug: seseliai
+      name: AKIŲ ŠEŠĖLIAI
+      pic: /img/eyeshadow.jpg
+      description: Akių makiažo technika ir akių šešėlių spalvos parinkimas turi atitikti jūsų plaukų, odos atsspalvį, o svarbiausia akių formą ir spalvą. Tinkamai naudojant akių šešėlius galima sudaryti įspūdį, kad akys yra mažesnės, didesnės, labiau atitolusios viena nuo kitos ar labai arti.
+      items:
+        - slug: cream-crush-lasting-colour-eyeshadow
+          name: CREAM CRUSH LASTING COLOUR EYESHADOW
+          short_description: Ilgai išliekantis kreminis akių šešėlis
+          pic: /img/akims/1.jpg
+          price: 8.90 €
+          description: Ilgalaikis kreminis akių šešėlis, kuris lengvai paryškina akis ir išlieka ilgiau nei 10 valandų.
