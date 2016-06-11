@@ -52,27 +52,25 @@ category: eyes
         <div class="col-md-3">
           <h3 class="m_1">Populiariausi produktai</h3>
 
-          {% for item_group in site.data.item_groups limit:1 %}
-            {% for item in item_group.items limit:1 %}
-              <ul class="product">
-                <a href="2_1_1.html">
-                  <li class="product_img">
-                    <img src="{{ item.pic }}" class="img-responsive" alt=""/>
-                  </li>
+          {% for item in site[page.category] limit:1 %}
+            <ul class="product">
+              <a href="2_1_1.html">
+                <li class="product_img">
+                  <img src="{{ item.pic }}" class="img-responsive" alt=""/>
+                </li>
 
-                  <li class="product_desc">
-                    <h4>
-                      {{ item.name }}
-                    </h4>
+                <li class="product_desc">
+                  <h4>
+                    {{ item.name }}
+                  </h4>
 
-                    <p class="single_price">{{ item.price }}</p>
-                  </li>
-                </a>
+                  <p class="single_price">{{ item.price }}</p>
+                </li>
+              </a>
 
-                <div class="clearfix">
-                </div>
-              </ul>
-            {% endfor %}
+              <div class="clearfix">
+              </div>
+            </ul>
           {% endfor %}
 
         </div>
